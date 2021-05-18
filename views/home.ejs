@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+  <div class="container mt-5 "> 
+  <section id="heading"> 
+    <h4 class="display-4">Bank Branches</h4>
+  </section>
+
+    <div class="dropdown mt-5">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+         City
+        </button>
+       
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="#"><%= bank.city %></a></li>
+        </ul>
+      
+
+        <form>
+          <input type="text" size="30" onkeyup="showResult(this.value)" />
+          <div id="livesearch" class="hide"></div>
+        </form>
+
+      </div>
+
+      <div class="mt-5">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">IFSC</th>
+              <th scope="col">Branch</th>
+              <th scope="col">City</th>
+              <th scope="col">State</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><%=bank.ifsc %></th>
+              <td><%=bank.branch %></td>
+              <td><%=bank.city %></td>
+              <td><%=bank.state %></td>
+            </tr>
+          </tbody>
+        </table>
+        
+      </div>
+
+
+
+    </div>
+
+    <script src="search.js"></script>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
