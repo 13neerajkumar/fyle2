@@ -55,7 +55,6 @@ app.route("/")
     {
         console.log("Something Went Wrong");
         res.send('error');
-     }
 
 })
 .post((req, res)=> {
