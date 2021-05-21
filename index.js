@@ -44,20 +44,20 @@ mongoose.connect(process.env.DB_Url,
 
 
 app.route("/")
-.get(async(req, res)=> {
+.get((req, res)=> {
     res.render("home");
 
     try{
-        const bank = await bankSchema.findOne();
+        const bank =  bankSchema.findOne();
         res.render('home', {bank});
     }
     catch (e) 
     {
         console.log("Something Went Wrong");
         res.send('error');
-    })     
+    }
 })
-.post((req, res)=> {
+app.post('/',(req, res)=> {
     //Declare variables
     let hint = "";
     let response = "";
