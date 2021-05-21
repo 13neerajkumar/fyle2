@@ -44,7 +44,7 @@ mongoose.connect(process.env.DB_Url,
 
 
 app.route("/")
-.get('/', async(req, res)=> {
+.get(async(req, res)=> {
     res.render("home");
 
     try{
