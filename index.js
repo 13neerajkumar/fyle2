@@ -44,8 +44,8 @@ mongoose.connect(process.env.DB_Url,
 
 
 //app.route("/")
-app.route('/', async(req, res)=> {
-    //res.render("home");
+app.get('/', async(req, res)=> {
+    res.render("home");
 
     try{
         const bank = await bankSchema.findOne();
